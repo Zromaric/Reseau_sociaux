@@ -1,0 +1,250 @@
+*,*::after,*::before{
+          box-sizing: border-box;
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.6);
+}
+body{
+          background:#f1f1f1;
+          font-family: Roboto, sans-serif;
+          margin: 0;
+          line-height: 1.6;
+}
+
+
+/* GESTION DU MENU */
+a{
+          color: inherit;
+          text-decoration: none;
+}
+
+.navbar{
+          background: #2c3e50;
+          color: #fff;
+}
+
+.navbar-logo{
+          display: block;
+          text-align: center;
+          font-size: 28px;
+          color: #fff;
+}
+
+nav{
+          color: rgba(255, 255, 255, 0.67);
+          text-align: center;
+          padding-bottom: 15px;
+          line-height: 2;
+}
+
+nav a{
+          padding: 0 12px;         
+}
+
+nav a:hover{
+          color: #fff;
+          text-decoration: underline;
+          transition: color .3s;
+}
+
+
+/* GESTION DU CONTENU */
+
+
+
+.container{
+          padding: 0 15px;
+          max-width: 1300px;
+          margin-left: auto;
+          margin-right: auto;
+}
+
+.contenu{
+          margin-bottom: 20px;
+}
+
+
+/* BLOC DE GAUCHE */
+
+
+
+.aside-bar{
+          font-size: 14px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+}
+
+.aside-bar a{
+          display: block;
+          text-decoration: none;
+          padding: 0.5em;
+}
+
+.aside-bar a::before{
+          content: '';
+          display: inline-block;
+          width: 11px;
+          height: 15px;
+          vertical-align: middle;
+          margin-top: -2px;
+          margin-right: 20px;
+          opacity: .7s;
+          background: url(./silueta1_svg.png) center center / contain no-repeat;
+}
+
+.aside-bar .aside-bar-message::before{
+          background-image: url(./silueta1_svg.png);
+}
+
+.aside-bar .aside-bar-events::before{
+          background-image: url(./silueta1_svg.png);
+}
+
+.aside-bar .aside-bar-group::before{
+          background-image: url(./silueta1_svg.png);
+}
+
+.aside-bar a:hover{
+          text-decoration: underline;
+}
+
+.aside-bar a:hover,.aside-bar a.active{
+          text-decoration: underline;
+          color: black;
+}
+
+.aside-bar a:hover::before,.aside-bar a.active::before{
+          opacity: 1;
+}
+
+
+
+/* BLOC DU CENTRE */
+
+.card{
+          margin: 35px 0;
+          background: #dcdfde;
+          padding: 10px;
+          border-radius: 5px;
+}
+
+.card-title{
+          font-size: 18px;
+          line-height: 1.5;
+          position: relative;
+          margin-top: 10px;
+          margin-bottom: 10px;
+}
+
+.card-second{
+          padding-left: 70px;
+}
+
+.card-title-avatar{
+          color: black;
+          font-weight: 900;
+}
+
+.avatar{
+          border-radius: 50%;
+          border:1px solid #2c3e50;
+          position: absolute;
+          top: 5%;
+          left: 10px;
+}
+
+.card-title-time{
+          color: rgba(0, 0, 0, 0.4);
+}
+
+
+.card-container .image{
+          width: 100%;
+          height: 350px;
+}
+
+.card-container p{
+          text-align: justify;
+}
+
+
+.card-footer{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+}
+
+.card-footer span{
+          font-size: 14px;
+          line-height: 1.2;
+          padding: 0 5px ;
+}
+
+.card-footer .like, .card-footer .comment{
+          display: flex;
+          align-items: flex-end;
+}
+
+.suggestion{
+          padding: 10px;
+          background: #6080af;
+} 
+.suggestion-title{
+          font-size: 25px;
+          color: black;
+          font-weight: bold;
+          line-height: 1.2;
+}
+
+.suggestion .line{
+          background: #000;
+          width: 100%;
+          height: 2px;
+          margin-top: 6px;
+          margin-bottom: 25px;
+}
+
+
+
+/* MISE EN PLACE DU RESPONSIVE */
+
+
+
+
+@media only screen and (min-width: 575px){
+          .navbar{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+                    padding: 0 30px;
+          }
+
+          .navbar-logo, nav{
+                    padding: 0;
+          }
+
+}
+
+@media only screen and (min-width: 950px){
+            .contenu{
+                    display: flex;
+            }
+
+            .aside-bar{
+                    flex: none;
+                    width: 180px;
+                    display: block;
+            }
+
+            article{
+                    width: 100%;
+                    margin-left: 15px;
+                    margin-right: 15px;
+            }
+
+            aside{
+                    flex: none;
+                    width: 380px;
+            }
+}
